@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f1e7" />
+    <title>Cat Age Calculator — Convert Cat Years to Human Years (Vet-Approved)</title>
+    <meta name="description" content="Find out your cat's real age in human years using the accurate veterinary formula — not the outdated 'multiply by 7' myth. See your cat's life stage and what it means for their care." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Cat Age Calculator — Convert Cat Years to Human Years (Vet-Approved)" />
+    <meta property="og:description" content="Find out your cat's real age in human years using the accurate veterinary formula — not the outdated 'multiply by 7' myth. See your cat's life stage and what it means for their care." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cat Age Calculator — Convert Cat Years to Human Years (Vet-Approved)" />
+    <meta name="twitter:description" content="Find out your cat's real age in human years using the accurate veterinary formula — not the outdated 'multiply by 7' myth. See your cat's life stage and what it means for their care." />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Purrage Cat Age Calculator",
+        "description": "A free cat age calculator that converts cat years to human-equivalent years and identifies a cat's life stage.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Purrage home" data-testid="link-home">
+          <span class="brand-mark" aria-hidden="true">
+            <span class="brand-ear brand-ear-left"></span>
+            <span class="brand-ear brand-ear-right"></span>
+            <span class="brand-face"></span>
+          </span>
+          <span class="brand-name">purrage<span aria-hidden="true">.</span></span>
+        </a>
+        <a class="header-link" href="#how-it-works" data-testid="link-how-it-works">How it works <span aria-hidden="true">↓</span></a>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> For the curious cat parent</p>
+            <h1 id="hero-title">How old is your cat <em>really?</em></h1>
+            <p class="hero-lede">A little perspective for every nap, headbutt, and birthday treat. Turn your cat's age into a human-age estimate in just a few gentle steps.</p>
+            <a class="text-link" href="#calculator">Find their human age <span aria-hidden="true">↘</span></a>
+          </div>
+
+          <div class="hero-art" aria-label="Illustration of a curled-up cat in a sunny window" role="img">
+            <span class="sun-disc" aria-hidden="true"></span>
+            <span class="window-line window-line-vertical" aria-hidden="true"></span>
+            <span class="window-line window-line-horizontal" aria-hidden="true"></span>
+            <span class="plant plant-one" aria-hidden="true"></span>
+            <span class="plant plant-two" aria-hidden="true"></span>
+            <span class="cat-art" aria-hidden="true">
+              <span class="cat-tail"></span>
+              <span class="cat-body"></span>
+              <span class="cat-head"></span>
+              <span class="cat-ear cat-ear-left"></span>
+              <span class="cat-ear cat-ear-right"></span>
+              <span class="cat-eye cat-eye-left"></span>
+              <span class="cat-eye cat-eye-right"></span>
+              <span class="cat-nose"></span>
+            </span>
+            <span class="art-caption">slow mornings<br />welcome here</span>
+          </div>
+        </section>
+
+        <section class="calculator-wrap" id="calculator" aria-labelledby="calculator-title">
+          <div class="section-intro">
+            <p class="section-kicker">The little calculator</p>
+            <h2 id="calculator-title">Tell us about<br /><em>your companion.</em></h2>
+            <p>Every cat has their own rhythm. This is a common-age estimate, made for a useful conversation starter.</p>
+          </div>
+
+          <div class="calculator-card">
+            <form id="age-form" novalidate>
+              <div class="form-heading">
+                <span class="step-number">01</span>
+                <div>
+                  <h3>Their age</h3>
+                  <p>Use their most recent birthday.</p>
+                </div>
+              </div>
+
+              <div class="age-field">
+                <label for="cat-age">Cat's age in years</label>
+                <div class="input-wrap">
+                  <input id="cat-age" name="age" type="number" min="0" max="30" step="0.1" inputmode="decimal" placeholder="1.5" aria-describedby="age-hint age-error" data-testid="input-age" />
+                  <span aria-hidden="true">yr</span>
+                </div>
+                <p class="field-error" id="age-error" role="alert"></p>
+              </div>
+              <p class="field-hint" id="age-hint">Decimals are welcome, like 0.5 or 1.5.</p>
+
+              <div class="form-actions">
+                <button class="primary-button" type="submit" data-testid="button-calculate">Calculate <span aria-hidden="true">→</span></button>
+                <button class="reset-button" type="reset" data-testid="button-reset">Clear</button>
+              </div>
+            </form>
+
+            <div class="result-panel" id="result-panel" aria-live="polite" aria-atomic="true" hidden>
+              <div class="result-topline"><span class="result-paw" aria-hidden="true"></span> Their approximate human age</div>
+              <div class="result-age"><span id="human-age" data-testid="text-human-age">—</span> <small>years old</small></div>
+              <h3 class="result-stage" id="result-stage" data-testid="text-life-stage">—</h3>
+              <p class="result-stage-description" id="result-stage-description" data-testid="text-stage-description"></p>
+              <div class="result-note">
+                <span class="note-mark" aria-hidden="true">i</span>
+                <p id="result-note"></p>
+              </div>
+              <button class="result-reset" type="button" id="result-reset" data-testid="button-result-reset">Try another age <span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </section>
+
+        <section class="life-stage-section" aria-labelledby="life-stage-title">
+          <div class="life-stage-heading">
+            <p class="section-kicker">A guide for every chapter</p>
+            <h2 id="life-stage-title">Understanding Your Cat's<br /><em>Life Stage</em></h2>
+            <p>Every age has its own kind of care. After you calculate above, your cat's current stage will be highlighted here.</p>
+          </div>
+
+          <div class="life-stage-grid">
+            <article class="stage-card" data-life-stage="Kitten">
+              <div class="stage-card-header">
+                <span class="stage-card-index">01</span>
+                <span class="stage-card-range">0–6 months</span>
+              </div>
+              <h3>Kitten</h3>
+              <p>Rapid growth, vaccinations, socialization window</p>
+              <span class="stage-match" aria-hidden="true">Your result</span>
+            </article>
+            <article class="stage-card" data-life-stage="Junior">
+              <div class="stage-card-header">
+                <span class="stage-card-index">02</span>
+                <span class="stage-card-range">6 months–2 years</span>
+              </div>
+              <h3>Junior</h3>
+              <p>Reaching physical and social maturity</p>
+              <span class="stage-match" aria-hidden="true">Your result</span>
+            </article>
+            <article class="stage-card" data-life-stage="Prime">
+              <div class="stage-card-header">
+                <span class="stage-card-index">03</span>
+                <span class="stage-card-range">2–6 years</span>
+              </div>
+              <h3>Prime</h3>
+              <p>Peak health years</p>
+              <span class="stage-match" aria-hidden="true">Your result</span>
+            </article>
+            <article class="stage-card" data-life-stage="Mature">
+              <div class="stage-card-header">
+                <span class="stage-card-index">04</span>
+                <span class="stage-card-range">6–10 years</span>
+              </div>
+              <h3>Mature</h3>
+              <p>Early senior changes begin — weight, dental, joints</p>
+              <span class="stage-match" aria-hidden="true">Your result</span>
+            </article>
+            <article class="stage-card" data-life-stage="Senior">
+              <div class="stage-card-header">
+                <span class="stage-card-index">05</span>
+                <span class="stage-card-range">10–14 years</span>
+              </div>
+              <h3>Senior</h3>
+              <p>Increased vet visit frequency recommended</p>
+              <span class="stage-match" aria-hidden="true">Your result</span>
+            </article>
+            <article class="stage-card" data-life-stage="Geriatric">
+              <div class="stage-card-header">
+                <span class="stage-card-index">06</span>
+                <span class="stage-card-range">14+ years</span>
+              </div>
+              <h3>Geriatric</h3>
+              <p>Highest-risk stage, most care-intensive</p>
+              <span class="stage-match" aria-hidden="true">Your result</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="how-section" id="how-it-works" aria-labelledby="how-title">
+          <div class="how-header">
+            <p class="section-kicker">A simple rule of thumb</p>
+            <h2 id="how-title">Cats grow up quickly,<br /><em>then find their pace.</em></h2>
+          </div>
+          <div class="age-rule">
+            <article class="rule-item">
+              <span class="rule-number">01</span>
+              <span class="rule-age">~15</span>
+              <h3>First year</h3>
+              <p>The big leap from tiny paws to a full-grown personality.</p>
+            </article>
+            <article class="rule-item rule-item-featured">
+              <span class="rule-number">02</span>
+              <span class="rule-age">+9</span>
+              <h3>Second year</h3>
+              <p>A year of confident curiosity, counted a little differently.</p>
+            </article>
+            <article class="rule-item">
+              <span class="rule-number">03+</span>
+              <span class="rule-age">+4</span>
+              <h3>Each year after</h3>
+              <p>From here, every birthday adds about four human years.</p>
+            </article>
+          </div>
+          <p class="method-note"><span aria-hidden="true">—</span> These numbers are a friendly estimate, not a veterinary measure. Your cat's health, breed, and history are part of their real story.</p>
+        </section>
+
+        <section class="closing-note" aria-labelledby="closing-title">
+          <div class="closing-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div>
+            <p class="section-kicker">One more thing</p>
+            <h2 id="closing-title">However old they are,<br /><em>they are still your baby.</em></h2>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <a class="brand footer-brand" href="/" aria-label="Purrage home" data-testid="link-footer-home">
+          <span class="brand-mark" aria-hidden="true">
+            <span class="brand-ear brand-ear-left"></span>
+            <span class="brand-ear brand-ear-right"></span>
+            <span class="brand-face"></span>
+          </span>
+          <span class="brand-name">purrage<span aria-hidden="true">.</span></span>
+        </a>
+        <p>Made for the people who know the sound of a happy purr.</p>
+        <p class="footer-small">A small tool for a big love.</p>
+      </footer>
+    </div>
+    <script src="/js/calculator.js"></script>
+  </body>
+</html>
