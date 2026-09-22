@@ -16,6 +16,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.purrage.com/siamese-lifespan/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.purrage.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
