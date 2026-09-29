@@ -29,11 +29,16 @@
     <loc>https://www.purrage.com/persian-lifespan/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-</url>
+    </url>
     <url>
     <loc>https://www.purrage.com/how-old-is-my-cat-in-human-years/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    </url>
+  <url>
+    <loc>https://www.purrage.com/cat-breeds/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
     </url>
   <url>
     <loc>https://www.purrage.com/about/</loc>
