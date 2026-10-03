@@ -78,37 +78,7 @@
   gtag('config', 'G-BVE60VPQ0H');
 </script>
   </head>
-  <script>
-  (function () {
-    var input = document.getElementById('breed-search-input');
-    var countEl = document.getElementById('breed-search-count');
-    var cards = Array.prototype.slice.call(document.querySelectorAll('.resources-grid .resource-card'));
-
-    function filterCards() {
-      var query = input.value.trim().toLowerCase();
-      var visible = 0;
-
-      cards.forEach(function (card) {
-        var title = card.querySelector('h3');
-        var text = title ? title.textContent.toLowerCase() : '';
-        var matches = text.indexOf(query) !== -1;
-        card.hidden = !matches;
-        if (matches) visible++;
-      });
-
-      if (query === '') {
-        countEl.textContent = '';
-      } else {
-        countEl.textContent = visible === 0
-          ? 'No breeds match "' + input.value.trim() + '"'
-          : visible + ' breed' + (visible === 1 ? '' : 's') + ' found';
-      }
-    }
-
-    input.addEventListener('input', filterCards);
-  })();
-</script>
-  <body>
+    <body>
     <div class="page-shell">
       <header class="site-header">
         <a class="brand" href="/" aria-label="Purrage home" data-testid="link-home">
@@ -134,9 +104,7 @@
             <h1 id="hub-title">Cat Breed<br /><em>Lifespan Guides.</em></h1>
             <p>Average lifespan, what affects it, and health conditions to watch for — for every breed we've covered so far.</p>
           </div>
-
-          <div class="resources-grid">
-            <div class="breed-search">
+                  <div class="breed-search">
   <label for="breed-search-input" class="breed-search-label">Search breeds</label>
   <input
     type="text"
@@ -147,6 +115,8 @@
   />
   <p class="breed-search-count" id="breed-search-count" aria-live="polite"></p>
 </div>
+
+          <div class="resources-grid">
             <a class="resource-card" href="/maine-coon-lifespan/">
               <span class="resource-kicker">Breed guide</span>
               <h3>Maine Coon Lifespan Guide</h3>
@@ -259,5 +229,35 @@
         <p class="footer-small">A small tool for a big love.</p>
       </footer>
     </div>
+      <script>
+  (function () {
+    var input = document.getElementById('breed-search-input');
+    var countEl = document.getElementById('breed-search-count');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.resources-grid .resource-card'));
+
+    function filterCards() {
+      var query = input.value.trim().toLowerCase();
+      var visible = 0;
+
+      cards.forEach(function (card) {
+        var title = card.querySelector('h3');
+        var text = title ? title.textContent.toLowerCase() : '';
+        var matches = text.indexOf(query) !== -1;
+        card.hidden = !matches;
+        if (matches) visible++;
+      });
+
+      if (query === '') {
+        countEl.textContent = '';
+      } else {
+        countEl.textContent = visible === 0
+          ? 'No breeds match "' + input.value.trim() + '"'
+          : visible + ' breed' + (visible === 1 ? '' : 's') + ' found';
+      }
+    }
+
+    input.addEventListener('input', filterCards);
+  })();
+</script>
   </body>
 </html>
