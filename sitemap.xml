@@ -51,6 +51,26 @@
     <priority>0.7</priority>
     </url>
   <url>
+<loc>https://www.purrage.com/sphynx-lifespan/</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.purrage.com/scottish-fold-lifespan/</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.purrage.com/russian-blue-lifespan/</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.purrage.com/abyssinian-lifespan/</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+  <url>
     <loc>https://www.purrage.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
