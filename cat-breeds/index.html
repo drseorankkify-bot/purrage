@@ -78,6 +78,36 @@
   gtag('config', 'G-BVE60VPQ0H');
 </script>
   </head>
+  <script>
+  (function () {
+    var input = document.getElementById('breed-search-input');
+    var countEl = document.getElementById('breed-search-count');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('.resources-grid .resource-card'));
+
+    function filterCards() {
+      var query = input.value.trim().toLowerCase();
+      var visible = 0;
+
+      cards.forEach(function (card) {
+        var title = card.querySelector('h3');
+        var text = title ? title.textContent.toLowerCase() : '';
+        var matches = text.indexOf(query) !== -1;
+        card.hidden = !matches;
+        if (matches) visible++;
+      });
+
+      if (query === '') {
+        countEl.textContent = '';
+      } else {
+        countEl.textContent = visible === 0
+          ? 'No breeds match "' + input.value.trim() + '"'
+          : visible + ' breed' + (visible === 1 ? '' : 's') + ' found';
+      }
+    }
+
+    input.addEventListener('input', filterCards);
+  })();
+</script>
   <body>
     <div class="page-shell">
       <header class="site-header">
