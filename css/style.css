@@ -930,3 +930,7 @@ h2 {
   border-color: var(--terracotta, #c46a49);
   color: #fff;
 }
+.article-body table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;margin:20px 0;font-size:.95rem}
+.article-body th,.article-body td{padding:10px 12px;border:1px solid rgba(0,0,0,.12);text-align:left;vertical-align:top}
+.article-body th{background:rgba(0,0,0,.04);font-weight:600;white-space:nowrap}
+.article-body h3{margin:1.4em 0 .4em}
