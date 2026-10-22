@@ -145,6 +145,36 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+    <url>
+    <loc>https://www.purrage.com/cat-life-stages/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.purrage.com/kitten-age-chart/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.purrage.com/how-to-tell-how-old-a-cat-is/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.purrage.com/when-is-a-cat-senior/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.purrage.com/oldest-cat-ever/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://www.purrage.com/about/</loc>
     <changefreq>monthly</changefreq>
