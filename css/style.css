@@ -943,3 +943,6 @@ h2 {
   .article-body td:last-child{border-bottom:0}
   .article-body td::before{content:attr(data-label);display:block;font-size:.75rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--terracotta,#c46a49);margin-bottom:2px}
 }
+.how-header{text-align:left;justify-self:start;margin-left:0;margin-right:auto}
+.how-header h2,.how-header .section-kicker{text-align:left}
+.resources-section + .resources-section{padding-top:0;margin-top:0}
