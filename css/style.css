@@ -993,3 +993,4 @@ h2 {
   .nav-dd-down .nav-dd-panel { top: 72px; bottom: auto; }
   .nav-dd-up .nav-dd-panel { bottom: 16px; top: auto; }
 }
+.resource-card-wide { grid-column: 1 / -1; }
